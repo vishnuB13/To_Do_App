@@ -12,7 +12,7 @@ function App() {
 
     <div className='border'>
       <div className="app">
-        <h1 style={{color:"green",textAlign:"center"}}>To-Do-List</h1> 
+        <h1 style={{color:"greenyellow",textAlign:"center"}}>To-Do-List</h1> 
       <div className='ver'>
       <div className="put ">
         <input value={toDo} onChange={(e) => {
