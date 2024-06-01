@@ -1,57 +1,32 @@
 import React from 'react';
 import './App.css';
 import { useState } from 'react';
+import Todo from './Todo';
+import { red } from '@material-ui/core/colors';
 
 
 function App() {
-  const [toDos,setTodos]=useState([])
-  const [toDo,setTodo]=useState('')
+  const [toDos, setTodos] = useState([])
+  const [toDo, setTodo] = useState('')
   return (
 
-    <div className="app">
-      <div className="mainHeading">
-        <h1>ToDo List</h1>
+    <div className='border'>
+      <div className="app">
+        <h1 style={{color:"green",textAlign:"center"}}>To-Do-List</h1> 
+      <div className='ver'>
+      <div className="put ">
+        <input value={toDo} onChange={(e) => {
+          setTodo(e.target.value)
+        }} type="text" placeholder="🖊️ Add item..."  style={{ color: "white" }}/>
+        <i onClick={() => {
+          setTodos([...toDos, { id: Date.now(), text: toDo, status: false }])
+        }} className="fa fa-plus mer"></i>
       </div>
-      <div className="subHeading">
-        <br />
       </div>
-      <div className="input">
-        <input value={toDo} onChange={(e)=>{
-           setTodo(e.target.value)}} type="text" placeholder="🖊️ Add item..." />
-        <i onClick={()=>setTodos([...toDos,{id:Date.now(),text:toDo,status:false}])} className="fas fa-plus"></i>
-      </div>
-      <div className="todos">
-       {
-        toDos.map((value)=>{
-          return( <div className="todo">
-          <div className="left">
-            <input onChange={(e)=>{
-             setTodos(toDos.filter(item=>{
-              if(item.id===value.id){
-                item.status=e.target.checked
-              }
-              return item
-             }))
-            }} value={value.status} type="checkbox" name="" id="" />
-            <p>{value.text}</p>
-          </div>
-          <div className="right">
-            <i onClick={()=>{
-              setTodos(toDos.filter((item)=>
-                item.id!==value.id
-              ))
-            }} className="fas fa-times"></i>
-          </div>
-        </div>)
-        })
-       }
-      </div>
+     
+      <Todo toDos={toDos} setTodos={setTodos}/>
     </div>
-
-
-
-
-
+    </div>
   );
 }
 

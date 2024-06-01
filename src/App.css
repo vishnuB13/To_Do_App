@@ -4,57 +4,84 @@
 }
 
 body {
-  background-color: #098c4c;
+  background-color: white;
 }
 
-.app {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -10%);
+* :hover{
+  background-color:black;
+  margin: auto ;
 }
+
+.border {
+  margin-top: 100px;
+  width: 500px;
+  height: 500px;
+  background-color:black;
+  border: solid 1px greenyellow;
+  display: flex;
+  justify-content: center;
+  box-shadow:  red;
+  border-radius: 50px;
+}
+
 
 .app .mainHeading h1 {
   text-align: center;
+  margin-top: 5px;
 }
 
 .app h1,
 h2 {
-  color: rgb(218, 217, 217);
+  color: black;
 }
 
-.app .input {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.app .input {
+
+.app .ver .put {
   margin-top: 0.8em;
   width: 20em;
   height: 2em;
-  background-color: white;
+  background-color: #1f1d1d;
   display: flex;
   justify-content: space-between;
+  border: solid 1px white;
   align-items: center;
   border-radius: 6px;
   padding: 5px;
+} 
+
+.app .ver :hover{
+border-color: rgb(21, 173, 107);
+padding: 3px;
 }
 
-.app .input input {
+
+ .app input {
   width: 100%;
-  height: 1.6em;
   border-color: transparent;
-  outline-color: transparent;
+  outline-color: #1f1d1d;
+  background-color: #1f1d1d;
 }
+
+
 
 .app i {
   cursor: pointer;
   font-size: larger;
   font-weight: 900;
-  color: grey;
+  color:greenyellow;
   margin-right: 5px;
 }
+
+.app :hover{
+  color: red;
+}
+
+.app .puthover :hover{
+  border: solid 1px greenyellow;
+}
+
+
 .app .todos {
   display: flex;
   justify-content: center;
@@ -65,13 +92,18 @@ h2 {
   margin-top: 0.8em;
   width: 20em;
   height: 2em;
-  background-color: white;
+  background-color: #1f1d1d;
+  border: solid 1px white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 6px;
   padding: 5px;
 }
+.app .todos :hover{
+  border-color: green;
+}
+
 .app .todos .todo .left {
   display: flex;
   justify-content: flex-start;
@@ -83,6 +115,6 @@ h2 {
   font-size: medium;
   font-weight: 700;
   font-style: normal;
-  color: grey;
+  color:white;
 }
 
