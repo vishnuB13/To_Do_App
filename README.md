@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with Create-React-App.
 
 ## Overview:
 This ToDo App is a simple yet powerful application built with React and JavaScript that helps users manage their daily tasks effectively. It provides an intuitive and user-friendly interface for adding, viewing, and managing tasks. This app is designed to enhance productivity by allowing users to keep track of their to-do list effortlessly.
