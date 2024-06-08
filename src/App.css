@@ -9,7 +9,8 @@ body {
 
 * :hover{
   background-color:black;
-  margin: auto ;
+  align-items: center;
+  
 }
 
 .border {
@@ -22,6 +23,7 @@ body {
   justify-content: center;
   box-shadow:  red;
   border-radius: 50px;
+  margin-left: 500px;
 }
 
 
